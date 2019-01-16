@@ -53,9 +53,12 @@ export default class saComponent extends React.Component {
     console.log("Request JSON:",reqJson);
 
     $.ajax({
-      url:'http://localhost:3000/assess.json',
-      type:'GET',//change to POST
-      data: reqJson
+      url:'http://localhost:3001/assess',
+      type:'POST',//change to POST
+      //contentType: 'application/json',
+      //data: reqJson
+      data : JSON.stringify(reqJson),
+      contentType: "application/json; charset=utf-8"
     }).then(function(response){
       console.log("AJAX Response:",response);
       
