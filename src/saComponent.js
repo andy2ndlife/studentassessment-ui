@@ -23,6 +23,14 @@ export default class saComponent extends React.Component {
     }
 
     handleChange(event){
+      this.setState({
+        clickCounter: [0],
+        showForm:false,
+        showGrades:false,
+        modal: false,
+        assessmentArray:[{"inputVal":"","inputUnit":"","targetUnit":"","response":""}],
+        gradeDetails: {"studentname":"","assessment":[]}
+      });
       if(event.target.value!=""){
         this.setState({showForm:true});    
         if(event.target.value=="15"){
@@ -76,8 +84,8 @@ export default class saComponent extends React.Component {
     });
     this.setState({showForm:false});
     this.setState({showGrades:true});
-    $("#studentSelect").val("");
-   
+    $("#studentSelect").val(""); 
+
 }
 
 addQuestion(event,row){
