@@ -1,0 +1,18 @@
+{
+	"studentname": "JohnDoe",
+	"assessment": [{
+			"inputVal": "123",
+			"inputUnit": "C",
+			"targetUnit": "K",
+            "response": "345",
+            "flag":"Correct"
+		},
+		{
+			"inputVal": "45",
+			"inputUnit": "F",
+			"targetUnit": "C",
+            "response": "67",
+            "flag":"Incorrect"
+		}
+	]
+}
